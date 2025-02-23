@@ -17,7 +17,7 @@ public class PlaneBehaviour : MonoBehaviour
 
     private void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Touchscreen.current.primaryTouch.press.wasPressedThisFrame || Mouse.current.leftButton.wasPressedThisFrame)
         {
             _rb.velocity = Vector2.up * _velocity;
         }   
